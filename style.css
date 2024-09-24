@@ -1,0 +1,58 @@
+:root {
+    --bgcolor: aliceblue;
+    --bgcolor2: black;
+    --textcolor1: silver;
+    --textcolor2: grey;
+    --textcolor3: #5a5a5a;
+    --textcolor4: #0000008c;
+    --textcolor5: black;
+}
+
+@keyframes Blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgcolor2);
+
+}
+
+.loader svg{
+    width: 100px;
+    height: 100px;
+    animation: fade-in 4s ease;
+}
